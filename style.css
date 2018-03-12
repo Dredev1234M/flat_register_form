@@ -1,0 +1,79 @@
+*{
+font-family: sans-serif;	
+}
+body,html{
+	height: 100%;
+	width: 100%;
+	margin:0;
+	padding: 0; 
+background: #FC5C7D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+text-align: center;
+}
+
+form{
+	width: 40%;
+	margin-left: 30%;
+	padding-top:10%;
+}
+
+input{
+	width: 100%;
+	background: transparent;
+	border-bottom: solid 1px #fff;
+	border-top:none;
+	border-left: none; /*cette propriété permet d'enlever les bordures de notre input*/
+	border-right: none;
+	font-size: 1rem;
+	padding: 0.5em 0.4em;
+	color: #000;
+	transition: 0.4s;
+	margin: 0.7rem 0;
+}
+
+/* attaquons maintenant le input-> focus c'est à dire le comprtement de nnotre input lorsque e curseur est sur lui*/
+input:focus{
+	background:#fff;
+	transform: scale3d(1.07,1.07,1.07); /* le scale 3d permet de modifier la taille d'un element en appliquant une homothetie( une homothetie permet en quelque sorte
+	de reduire ou d'agrandir une figure) definie par un vecteur. Pour plus de details voyez le CDN mozilla
+	ces coordonnées sont en quelque sorte x,y,z de notre input ajoutons une petite animation et vou verrez
+	le resulat, si on modifie le y par exemple regardez le resultat, c'est cool je sais on continue*/
+}
+
+button{
+	background: transparent;
+	width: 50%;
+	margin-top: 2.5rem;
+	font-size: 1rem;
+	border: solid 1px #7053c4;
+	padding: 1em 0;
+	color: #fff;
+	transition:0.6s;
+}
+
+button:hover{
+	cursor: pointer;
+	background:#FC5C7D;
+}
+
+h1{
+	color: #fff;
+	border-bottom: solid 1px #7035c4;
+	padding: 0 0 0.8em 0;
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 1em;
+}
+/*GERONS MAINTENANT LA RESPONSIVE DE NOTRE FORMULAIRE*/
+@media(max-width: 600px){
+	form{
+		width: 90%;
+		margin-left: 3%;
+		padding-top: 5%;
+	}
+	input{
+		font-size: 1em
+	}
+}
